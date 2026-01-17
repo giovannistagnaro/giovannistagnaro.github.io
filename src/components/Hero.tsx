@@ -38,6 +38,7 @@ const Hero = ({ title, subtitle, imageSrc }: HeroProps) => {
           flex justify-center
           text-white/60
           text-[clamp(1rem,4vw,3rem)]
+          animate-bounce
         "
       >
         ↓
