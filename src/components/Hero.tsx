@@ -15,11 +15,11 @@ const Hero = ({ title, subtitle, imageSrc }: HeroProps) => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/50 to-black/95"></div>
 
       {/* Content */}
       <div className="relative z-10 flex h-full w-full items-center justify-center px-6">
-        <div className="max-w-5xl text-center">
+        <div className="max-w-5xl text-center transform translate-y-[150%]">
           <h1 className="font-italiana text-white font-black text-[clamp(2.5rem,8vw,6rem)]">
             {title}
           </h1>
