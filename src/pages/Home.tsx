@@ -11,7 +11,7 @@ export default function Home() {
         subtitle="B.S. Mathematics/Computer Science"
         imageSrc="/images/giovanniAlaska.jpg"
       />
-      <div className="py-8 bg-neutral-950 bg-gradient-to-b from-neutral-900/90 to-neutral-950 ">
+      <div className="py-8 bg-neutral-950 bg-gradient-to-b from-black via-neutral-900 to-neutral-950">
         {rows.map((row) => (
           <section key={row.id} id={row.id}>
             <CardRow title={row.title}>
