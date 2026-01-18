@@ -6,10 +6,23 @@ export type CardRowProps = {
 const CardRow = ({ title, children }: CardRowProps) => {
   return (
     <section className="p-2">
-      <h1 className="px-8 text-red-500 font-bold text-[clamp(2.5rem,8vw,6rem)] w-max">
+      <h2
+        className=" px-8 w-max
+                    text-neutral-400 text-lg 
+                    font-semibold
+                    tracking-wide"
+      >
         {title}
-      </h1>
-      <div className="p-4 h-100 flex space-x-8 overflow-x-auto hide-scrollbar">{children}</div>
+      </h2>
+      <div
+        className=" flex
+                    px-6 py-8 space-y-4 space-x-6
+                    h-100 
+                    overflow-x-auto hide-scrollbar scroll-px-8 overflow-y-hidden
+                    snap-x snap-mandatory"
+      >
+        {children}
+      </div>
     </section>
   );
 };

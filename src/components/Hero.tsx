@@ -15,7 +15,7 @@ const Hero = ({ title, subtitle, imageSrc }: HeroProps) => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/45"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black/90"></div>
 
       {/* Content */}
       <div className="relative z-10 flex h-full w-full items-center justify-center px-6">
