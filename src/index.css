@@ -14,6 +14,13 @@
   --font-italiana: 'Italiana', serif;
 }
 
+@layer base {
+  html,
+  body {
+    @apply bg-zinc-950
+  }
+}
+
 
 @layer utilities {
   .hide-scrollbar::-webkit-scrollbar {
