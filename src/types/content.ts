@@ -22,8 +22,8 @@ export type CardItem =
       title: string;
       meta?: string;
       subtitle?: string;
-      type: "route";
-      route: string;
+      type: "project";
+      projectId: string;
     };
 export type CardRowModel = {
   id: string;

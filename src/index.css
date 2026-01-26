@@ -2,25 +2,24 @@
 @import "tailwindcss";
 
 @theme {
-  --font-bebas: 'Bebas Neue', cursive;
-  --font-inter: 'Inter', sans-serif;
-  --font-lora: 'Lora', serif;
-  --font-manrope: 'Manrope', sans-serif;
-  --font-merriweather: 'Merriweather', serif;
-  --font-montserrat: 'Montserrat', sans-serif;
-  --font-outfit: 'Outfit', sans-serif;
-  --font-playfair: 'Playfair Display', serif;
-  --font-righteous: 'Righteous', cursive;
-  --font-italiana: 'Italiana', serif;
+  --font-bebas: "Bebas Neue", cursive;
+  --font-inter: "Inter", sans-serif;
+  --font-lora: "Lora", serif;
+  --font-manrope: "Manrope", sans-serif;
+  --font-merriweather: "Merriweather", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  --font-righteous: "Righteous", cursive;
+  --font-italiana: "Italiana", serif;
 }
 
 @layer base {
   html,
   body {
-    @apply bg-zinc-950
+    @apply bg-zinc-950;
   }
 }
-
 
 @layer utilities {
   .hide-scrollbar::-webkit-scrollbar {
@@ -30,6 +29,61 @@
   .hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .site-button {
+  }
+}
+
+@layer components {
+  .site-card {
+    @apply flex flex-col items-center justify-center 
+      shrink-0
+      w-80 sm:w-120
+      border border-zinc-800 rounded-2xl 
+      shadow-lg shadow-black/40
+      focus:outline-none focus:ring-2 focus:ring-violet-400
+      cursor-pointer
+      transition-all duration-200 ease-out
+      snap-start
+      bg-zinc-900
+      font-merriweather;
+  }
+
+  .site-card:hover {
+    @apply scale-102 
+      ring-2 ring-violet-400 
+      border-violet-400 
+      bg-zinc-800;
+  }
+
+  .site-card:active {
+    @apply scale-98 
+    ring-2 ring-violet-400 
+    border-violet-400 
+    bg-zinc-800;
+  }
+
+  .site-button {
+    @apply px-4 py-2 
+      rounded-lg 
+      bg-zinc-900 
+      border border-zinc-800 
+      transition;
+  }
+
+  .site-button:hover {
+    @apply scale-102
+      ring-2 ring-violet-400
+      border-violet-400 
+      bg-zinc-800;
+  }
+
+  .site-button:active {
+    @apply scale-98
+      ring-2 ring-violet-400
+      border-violet-400
+      bg-zinc-800;
   }
 }
 

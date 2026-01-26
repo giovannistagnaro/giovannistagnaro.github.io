@@ -4,7 +4,6 @@ import { findCardById } from "../utils/findCard";
 export default function PDFPage() {
   const { id } = useParams();
   const isIOS = /iP(hone|od|ad)/.test(navigator.userAgent); // iOS doesn't display the PDF all the way
-
   const card = id ? findCardById(id) : undefined;
 
   if (!card || card.type !== "pdf") {
