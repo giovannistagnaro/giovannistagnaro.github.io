@@ -24,7 +24,8 @@ const CardRow = ({ title, children }: CardRowProps) => {
                     px-6 py-8 space-x-6
                     h-80 sm:h-100
                     overflow-x-auto hide-scrollbar scroll-px-8 overflow-y-hidden
-                    snap-x snap-mandatory"
+                    snap-x snap-proximity
+                    scroll-smooth"
       >
         {children}
       </div>

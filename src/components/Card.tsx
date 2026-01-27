@@ -21,8 +21,8 @@ const Card = ({ card }: CardProps) => {
       }
 
       case "project": {
-        console.log(`/projects/${card.projectId}`);
-        navigate(`/projects/${card.projectId}`);
+        console.log(`/projects/${card.id}`);
+        navigate(`/projects/${card.id}`);
         return;
       }
     }

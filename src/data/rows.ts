@@ -1,4 +1,6 @@
 import type { CardRowModel } from "../types/content";
+import { personalWebsiteCard } from "./projects/personalWebsite";
+import { virtuousCard } from "./projects/virtuous";
 
 export const rows: CardRowModel[] = [
   {
@@ -31,30 +33,15 @@ export const rows: CardRowModel[] = [
     id: "personalProjects",
     title: "Personal Projects",
     cards: [
-      {
-        id: "virtuous",
-        meta: "2D Game Engine",
-        title: "Virtuous",
-        subtitle: "MVP",
-        type: "project",
-        projectId: "virtuousProject",
-      },
+      virtuousCard,
       {
         id: "viaggiorni",
         meta: "Journal / Habit Tracker",
         title: "Viaggiorni",
         subtitle: "Work in Progress",
         type: "project",
-        projectId: "viaggiorniProject",
       },
-      {
-        id: "personalWebsite",
-        meta: "",
-        title: "Personal Website",
-        subtitle: "Complete",
-        type: "project",
-        projectId: "personalWebsiteProject",
-      },
+      personalWebsiteCard,
     ],
   },
   {
@@ -67,7 +54,6 @@ export const rows: CardRowModel[] = [
         title: "StickyPix",
         subtitle: "Hardware + Software",
         type: "project",
-        projectId: "stickyPixProject",
       },
       {
         id: "sayItAssitant",
@@ -75,7 +61,6 @@ export const rows: CardRowModel[] = [
         title: "SayIt! Assistant",
         subtitle: "Software",
         type: "project",
-        projectId: "sayItAssistantProject",
       },
       {
         id: "japaneseRealEstate",
@@ -83,7 +68,6 @@ export const rows: CardRowModel[] = [
         title: "Japanese Real Estate Prices and Proximity to Transport",
         subtitle: "Data Science + Research",
         type: "project",
-        projectId: "japaneseRealEstateProject",
       },
       {
         id: "iharaZetaFunction",
@@ -91,7 +75,6 @@ export const rows: CardRowModel[] = [
         title: "Ihara Zeta Function",
         subtitle: "Guided Reading",
         type: "project",
-        projectId: "iharaZetaFunctionProject",
       },
     ],
   },
@@ -104,13 +87,11 @@ export const rows: CardRowModel[] = [
         id: "piehole",
         title: "Pie-Hole",
         type: "project",
-        projectId: "pieHoleProject",
       },
       {
         id: "n8nAgents",
         title: "n8n Agents",
         type: "project",
-        projectId: "n8nProject",
       },
     ],
   },

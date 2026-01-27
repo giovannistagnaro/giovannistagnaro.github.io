@@ -23,7 +23,6 @@ export type CardItem =
       meta?: string;
       subtitle?: string;
       type: "project";
-      projectId: string;
     };
 export type CardRowModel = {
   id: string;
