@@ -21,7 +21,7 @@ const CardRow = ({ title, children }: CardRowProps) => {
       <div
         tabIndex={-1}
         className=" flex
-                    px-6 py-8 space-x-6
+                    px-6 pt-4 pb-8 space-x-6
                     h-80 sm:h-100
                     overflow-x-auto hide-scrollbar scroll-px-8 overflow-y-hidden
                     snap-x snap-proximity

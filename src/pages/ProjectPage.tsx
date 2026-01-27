@@ -50,20 +50,22 @@ export default function ProjectPage() {
 
         <p className="mt-4 text-zinc-300 leading-relaxed">
           <div className="font-semibold underline">tl;dr</div>
-          {project.tldr}
+          <div className="mt-1">{project.tldr}</div>
         </p>
 
         <p className="mt-4 text-zinc-300 leading-relaxed">
           <div className="font-semibold underline">Description</div>
-          {project.description.split("\n").map((paragraph) => (
-            <div className="pb-8">{paragraph}</div>
-          ))}
+          <div className="mt-1">
+            {project.description.split("\n").map((paragraph) => (
+              <div className="pb-8">{paragraph}</div>
+            ))}
+          </div>
         </p>
 
         {project.highlights?.length ? (
           <>
             <div className="font-semibold underline">Highlights</div>
-            <ul className="list-disc pl-5 text-zinc-300 space-y-2 mt-2">
+            <ul className="list-disc pl-5 text-zinc-300 space-y-2 mt-1">
               {project.highlights.map((b, i) => (
                 <li key={i}>{b}</li>
               ))}

@@ -46,7 +46,7 @@
       cursor-pointer
       transition-all duration-200 ease-out
       snap-start
-      bg-zinc-900
+      bg-radial from-zinc-800 to-zinc-900
       font-merriweather;
   }
 
@@ -54,14 +54,14 @@
     @apply scale-102 
       ring-2 ring-violet-400 
       border-violet-400 
-      bg-zinc-800;
+      bg-radial from-zinc-900 to-zinc-800;
   }
 
   .site-card:active {
     @apply scale-98 
     ring-2 ring-violet-400 
     border-violet-400 
-    bg-zinc-800;
+    bg-radial from-zinc-900 to-zinc-800;
   }
 
   .site-button {
