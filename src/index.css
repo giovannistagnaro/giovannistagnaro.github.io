@@ -15,9 +15,16 @@
 }
 
 @layer base {
-  html,
+  html {
+    scrollbar-width: none;
+  }
+
   body {
     @apply bg-zinc-950;
+    -ms-overflow-style: none;
+  }
+  body::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -44,7 +51,7 @@
       shadow-lg shadow-black/40
       focus:outline-none focus:ring-2 focus:ring-violet-400
       cursor-pointer
-      transition-all duration-200 ease-out
+      transition-all duration-400 ease-out
       snap-start
       bg-radial from-zinc-800 to-zinc-900
       font-merriweather;
@@ -54,14 +61,14 @@
     @apply scale-102 
       ring-2 ring-violet-400 
       border-violet-400 
-      bg-radial from-zinc-900 to-zinc-800;
+      bg-radial from-zinc-800 to-zinc-700;
   }
 
   .site-card:active {
     @apply scale-98 
     ring-2 ring-violet-400 
     border-violet-400 
-    bg-radial from-zinc-900 to-zinc-800;
+    bg-radial from-zinc-800 to-zinc-700;
   }
 
   .site-button {
