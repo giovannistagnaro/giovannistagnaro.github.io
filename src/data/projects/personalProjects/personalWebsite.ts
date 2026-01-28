@@ -1,5 +1,5 @@
-import type { Project } from "../../types/project";
-import type { CardItem } from "../../types/content";
+import type { Project } from "../../../types/project";
+import type { CardItem } from "../../../types/content";
 
 const id = "personalWebsite";
 const title = "Personal Website";

@@ -1,6 +1,8 @@
 import type { CardRowModel } from "../types/content";
-import { personalWebsiteCard } from "./projects/personalWebsite";
-import { virtuousCard } from "./projects/virtuous";
+import { personalWebsiteCard } from "./projects/personalProjects/personalWebsite";
+import { virtuousCard } from "./projects/personalProjects/virtuous";
+import { japaneseRealEstateCard } from "./projects/universityProjects/japaneseRealEstate";
+import { sayItAssistantCard } from "./projects/universityProjects/sayItAssistant";
 
 export const rows: CardRowModel[] = [
   {
@@ -55,20 +57,8 @@ export const rows: CardRowModel[] = [
         subtitle: "Hardware + Software",
         type: "project",
       },
-      {
-        id: "sayItAssitant",
-        meta: "CSE 110",
-        title: "SayIt! Assistant",
-        subtitle: "Software",
-        type: "project",
-      },
-      {
-        id: "japaneseRealEstate",
-        meta: "COGS 108",
-        title: "Japanese Real Estate Prices and Proximity to Transport",
-        subtitle: "Data Science + Research",
-        type: "project",
-      },
+      sayItAssistantCard,
+      japaneseRealEstateCard,
       {
         id: "iharaZetaFunction",
         meta: "MATH 199",

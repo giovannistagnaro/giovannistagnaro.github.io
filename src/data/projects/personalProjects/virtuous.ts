@@ -1,7 +1,7 @@
-import type { Project } from "../../types/project";
-import GameplayUrl from "../../assets/images/virtuous/gameplay.png";
-import DebugUrl from "../../assets/images/virtuous/debug-mode.png";
-import type { CardItem } from "../../types/content";
+import GameplayUrl from "../../../assets/images/virtuous/gameplay.png";
+import DebugUrl from "../../../assets/images/virtuous/debug-mode.png";
+import type { Project } from "../../../types/project";
+import type { CardItem } from "../../../types/content";
 
 const id = "virtuous";
 const title = "Virtuous";
