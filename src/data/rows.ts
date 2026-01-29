@@ -1,8 +1,11 @@
 import type { CardRowModel } from "../types/content";
 import { personalWebsiteCard } from "./projects/personalProjects/personalWebsite";
+import { viaggiorniCard } from "./projects/personalProjects/viaggiorni";
 import { virtuousCard } from "./projects/personalProjects/virtuous";
+import { iharaZetaFunctionCard } from "./projects/universityProjects/iharaZetaFunction";
 import { japaneseRealEstateCard } from "./projects/universityProjects/japaneseRealEstate";
 import { sayItAssistantCard } from "./projects/universityProjects/sayItAssistant";
+import { stickyPixCard } from "./projects/universityProjects/stickyPix";
 
 export const rows: CardRowModel[] = [
   {
@@ -12,8 +15,8 @@ export const rows: CardRowModel[] = [
       {
         id: "resume",
         title: "My Resume",
-        type: "pdf",
-        pdfSrc: "/pdfs/giovanniStagnaroResume.pdf",
+        type: "external",
+        href: "https://docs.google.com/document/d/1SRqH9vVj-5X-7arlDHyZH70m0OXzH-z19FvhRtEqa9A/edit?usp=sharing",
       },
       {
         id: "linkedin",
@@ -34,38 +37,16 @@ export const rows: CardRowModel[] = [
   {
     id: "personalProjects",
     title: "Personal Projects",
-    cards: [
-      virtuousCard,
-      {
-        id: "viaggiorni",
-        meta: "Journal / Habit Tracker",
-        title: "Viaggiorni",
-        subtitle: "Work in Progress",
-        type: "project",
-      },
-      personalWebsiteCard,
-    ],
+    cards: [personalWebsiteCard, virtuousCard, viaggiorniCard],
   },
   {
     id: "universityProjects",
     title: "University Projects",
     cards: [
-      {
-        id: "stickyPix",
-        meta: "ECE 140A/140B",
-        title: "StickyPix",
-        subtitle: "Hardware + Software",
-        type: "project",
-      },
+      stickyPixCard,
       sayItAssistantCard,
       japaneseRealEstateCard,
-      {
-        id: "iharaZetaFunction",
-        meta: "MATH 199",
-        title: "Ihara Zeta Function",
-        subtitle: "Guided Reading",
-        type: "project",
-      },
+      iharaZetaFunctionCard,
     ],
   },
 
@@ -79,8 +60,8 @@ export const rows: CardRowModel[] = [
         type: "project",
       },
       {
-        id: "n8nAgents",
-        title: "n8n Agents",
+        id: "aiAgents",
+        title: "AI Agents",
         type: "project",
       },
     ],

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import type { CardItem } from "../types/content";
+import { ExternalLink } from "lucide-react";
 
 export type CardProps = {
   card: CardItem;
@@ -34,7 +35,10 @@ const Card = ({ card }: CardProps) => {
         <div className="flex flex-col justify-between h-full p-6 text-center text-neutral-400">
           <div className="text-sm uppercase tracking-wide">{card.meta}</div>
           <div className="text-2xl font-semibold text-zinc-100">
-            {card.title}
+            <span className="inline-flex items-center gap-2">
+              {card.title}
+              {card.type === "external" && <ExternalLink size={16} />}
+            </span>
           </div>
           <div className="text-xs">{card.subtitle}</div>
         </div>
