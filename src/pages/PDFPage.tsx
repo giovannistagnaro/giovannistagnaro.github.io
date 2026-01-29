@@ -1,5 +1,6 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { findCardById } from "../utils/findCard";
+import SiteBackButton from "../components/SiteBackButton";
 
 export default function PDFPage() {
   const { id } = useParams();
@@ -9,9 +10,7 @@ export default function PDFPage() {
   if (!card || card.type !== "pdf") {
     return (
       <div className="min-h-screen bg-zinc-950 text-zinc-100 p-6">
-        <Link className="underline" to="/">
-          Back
-        </Link>
+        <SiteBackButton />
         <div className="mt-4">PDF not found.</div>
       </div>
     );
@@ -22,9 +21,7 @@ export default function PDFPage() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 overflow-x-hidden">
       <div className="mx-auto max-w-5xl px-4 py-4">
-        <Link className="underline" to="/">
-          Back
-        </Link>
+        <SiteBackButton />
         <h1 className="mt-2 text-lg font-semibold">{card.title}</h1>
       </div>
       {isIOS ? (

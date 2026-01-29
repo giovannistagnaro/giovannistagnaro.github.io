@@ -76,6 +76,7 @@
       rounded-lg 
       bg-zinc-900 
       border border-zinc-800 
+      cursor-pointer
       transition;
   }
 

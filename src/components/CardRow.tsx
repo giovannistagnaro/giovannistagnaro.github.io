@@ -30,7 +30,7 @@ const CardRow = ({ title, children }: CardRowProps) => {
           className=" flex
                       px-6 pt-4 pb-8 space-x-6
                       h-80 sm:h-100
-                      overflow-x-auto hide-scrollbar scroll-px-8 overflow-y-hidden
+                      overflow-x-auto hide-scrollbar scroll-px-8
                       scroll-smooth"
           ref={scrollerRef}
         >
