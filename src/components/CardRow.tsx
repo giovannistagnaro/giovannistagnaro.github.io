@@ -7,6 +7,7 @@ export type CardRowProps = {
 };
 
 const CardRow = ({ title, children }: CardRowProps) => {
+
   const scrollerRef = useRef<HTMLDivElement | null>(null);
 
   return (

@@ -1,12 +1,25 @@
+import { motion, MotionValue, useTransform } from "framer-motion";
+
 type HeroProps = {
+  heroRef: React.RefObject<HTMLDivElement | null>;
+  scrollYProgress: MotionValue<number>;
   title: string;
   subtitle?: string;
   imageSrc: string;
 };
 
-const Hero = ({ title, subtitle, imageSrc }: HeroProps) => {
+const Hero = ({
+  heroRef,
+  scrollYProgress,
+  title,
+  subtitle,
+  imageSrc,
+}: HeroProps) => {
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const heroY = useTransform(scrollYProgress, [0, 0.6], [0, -40]);
+
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section ref={heroRef} className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <img
         src={imageSrc}
@@ -18,21 +31,25 @@ const Hero = ({ title, subtitle, imageSrc }: HeroProps) => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/50 to-black"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full w-full items-center justify-center px-6">
-        <div className="max-w-5xl text-center transform translate-y-[20%]">
-          <h1 className="font-italiana text-white font-black text-[clamp(2.5rem,8vw,6rem)]">
-            {title}
-          </h1>
-          {subtitle && (
-            <p className="font-italiana text-white font-light text-[clamp(1rem,4vw,3rem)] mt-4">
-              {subtitle}
-            </p>
-          )}
+      <motion.div
+        style={{ opacity: heroOpacity, y: heroY }}
+        className="relative z-10 h-full flex items-center justify-center"
+      >
+        <div className="relative z-10 flex h-full w-full items-center justify-center px-6">
+          <div className="max-w-5xl text-center transform translate-y-[20%]">
+            <h1 className="font-italiana text-white font-black text-[clamp(2.5rem,8vw,6rem)]">
+              {title}
+            </h1>
+            {subtitle && (
+              <p className="font-italiana text-white font-light text-[clamp(1rem,4vw,3rem)] mt-4">
+                {subtitle}
+              </p>
+            )}
+          </div>
         </div>
-      </div>
 
-      <div
-        className="
+        <div
+          className="
           absolute bottom-6
           w-full
           flex justify-center
@@ -40,9 +57,10 @@ const Hero = ({ title, subtitle, imageSrc }: HeroProps) => {
           text-[clamp(1rem,4vw,3rem)]
           animate-bounce
         "
-      >
-        ↓
-      </div>
+        >
+          ↓
+        </div>
+      </motion.div>
     </section>
   );
 };
