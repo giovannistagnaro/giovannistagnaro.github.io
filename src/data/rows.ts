@@ -17,7 +17,7 @@ export const rows: CardRowModel[] = [
         id: "resume",
         title: "My Resume",
         type: "external",
-        href: "https://drive.google.com/file/d/1jqCHCB0j9K1WpUHLA0pSrDvzcNnVXBH_/view?usp=sharing",
+        href: "https://drive.google.com/file/d/1bohPycY_xPR-ZY4Apsio-EG2kaOu4RiV/view?usp=sharing",
       },
       {
         id: "linkedin",
