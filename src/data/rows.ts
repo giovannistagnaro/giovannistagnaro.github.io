@@ -1,4 +1,5 @@
 import type { CardRowModel } from "../types/content";
+import { piholeCard } from "./projects/hobbyProjects/pihole";
 import { personalWebsiteCard } from "./projects/personalProjects/personalWebsite";
 import { viaggiorniCard } from "./projects/personalProjects/viaggiorni";
 import { virtuousCard } from "./projects/personalProjects/virtuous";
@@ -54,11 +55,7 @@ export const rows: CardRowModel[] = [
     id: "hobbyProjects",
     title: "Hobby Projects",
     cards: [
-      {
-        id: "piehole",
-        title: "Pie-Hole",
-        type: "project",
-      },
+      piholeCard,
       {
         id: "aiAgents",
         title: "AI Agents",

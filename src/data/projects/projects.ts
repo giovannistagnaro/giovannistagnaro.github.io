@@ -1,4 +1,5 @@
 import type { Project } from "../../types/project";
+import { piholeProject } from "./hobbyProjects/pihole";
 import { personalWebsiteProject } from "./personalProjects/personalWebsite";
 import { viaggiorniProject } from "./personalProjects/viaggiorni";
 import { virtuousProject } from "./personalProjects/virtuous";
@@ -16,4 +17,6 @@ export const projects: Project[] = [
   sayItAssistantProject,
   japaneseRealEstateProject,
   iharaZetaFunctionProject,
+
+  piholeProject,
 ];
