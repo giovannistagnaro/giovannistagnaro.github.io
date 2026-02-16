@@ -1,5 +1,6 @@
 import type { Project } from "../../types/project";
 import { piholeProject } from "./hobbyProjects/pihole";
+import { privateMediaHubProject } from "./hobbyProjects/PrivateMediaHub";
 import { personalWebsiteProject } from "./personalProjects/personalWebsite";
 import { viaggiorniProject } from "./personalProjects/viaggiorni";
 import { virtuousProject } from "./personalProjects/virtuous";
@@ -19,4 +20,5 @@ export const projects: Project[] = [
   iharaZetaFunctionProject,
 
   piholeProject,
+  privateMediaHubProject
 ];
