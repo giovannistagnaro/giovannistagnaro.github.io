@@ -56,13 +56,13 @@ export const rows: CardRowModel[] = [
     id: "hobbyProjects",
     title: "Hobby Projects",
     cards: [
+      privateMediaHubCard,
       piholeCard,
       {
         id: "aiAgents",
         title: "AI Agents",
         type: "project",
       },
-      privateMediaHubCard
     ],
   },
 ];
