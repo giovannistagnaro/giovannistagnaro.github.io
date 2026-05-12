@@ -39,7 +39,7 @@ export const rows: CardRowModel[] = [
   {
     id: "personalProjects",
     title: "Personal Projects",
-    cards: [personalWebsiteCard, virtuousCard, viaggiorniCard],
+    cards: [viaggiorniCard, personalWebsiteCard, virtuousCard],
   },
   {
     id: "universityProjects",

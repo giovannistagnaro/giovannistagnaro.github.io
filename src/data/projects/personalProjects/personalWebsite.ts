@@ -28,7 +28,7 @@ export const personalWebsiteProject: Project = {
 
 export const personalWebsiteCard: CardItem = {
   id,
-  meta: "",
+  meta: "Online Portfolio",
   title,
   subtitle: "Complete",
   type: "project",
